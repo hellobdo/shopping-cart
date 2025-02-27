@@ -1,4 +1,4 @@
-import "./styles/card.css";
+import "./styles/Card.css";
 import { useAddToCart } from "./utils/cartUtils";
 import { useEffect, useRef } from "react";
 

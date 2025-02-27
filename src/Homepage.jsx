@@ -1,4 +1,4 @@
-import "./styles/App.css"
+import "./styles/Homepage.css"
 import useAPI from "./api";
 import NavBar from "./navBar";
 import Card from "./card";
