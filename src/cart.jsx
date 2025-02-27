@@ -1,8 +1,22 @@
 import { useCart } from "./context/MainContext";
 import "./styles/ShoppingCart.css"; // Optional for styling
+import { useState } from "react";
 
 const ShoppingCart = () => {
     const { cart } = useCart(); // Get cart items from context
+    const [checkout, setCheckout] = useState(false);
+
+    const handleCheckout = () => {
+        setCheckout(true);
+    }
+
+    if (checkout) {
+        return (
+            <div className="checkout-message">
+                <h2>Let's get your money now</h2>
+            </div>
+        )
+    }
 
     return (
         <div className="shopping-cart-container">
@@ -22,6 +36,7 @@ const ShoppingCart = () => {
                     ))}
                 </ul>
             )}
+            <button onClick={(handleCheckout)}>Checkout </button>
         </div>
     );
 };
